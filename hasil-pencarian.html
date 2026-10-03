@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hasil Pencarian – Bantutemukan.id</title>
+<style>
+:root{--ink:#0f2540;--paper:#f2f5fa;--leaf:#1d4f91;--sun:#f2b33d;--line:#cdd8e6;--muted:#4a5f78}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}.wrap{max-width:820px;margin:auto;padding:20px}
+.logo{font-weight:800;font-size:1.35rem;margin-bottom:30px}.logo b{color:var(--leaf)}
+.card{background:#fff;border:2px solid var(--line);border-radius:20px;padding:22px;margin-top:16px}
+.request{border-color:var(--ink);box-shadow:6px 6px 0 var(--sun)}
+h1{font-size:2rem;margin:0 0 8px}.muted{color:var(--muted)}
+.status{font-weight:700;font-size:1.15rem}.empty{margin-top:20px;padding:16px;background:#f2f5fa;border-radius:14px}
+.btn{display:inline-block;margin-top:16px;text-decoration:none;background:var(--ink);color:#fff;padding:13px 22px;border-radius:999px;font-weight:700}
+.pw{text-align:center;margin-top:28px}.pw img{width:60px;display:block;margin:0 auto 6px}.pw span{font-weight:700;font-size:.9rem}
+</style>
+</head>
+<body>
+<main class="wrap">
+<div class="logo">Bantutemukan<b>.id</b></div>
+<h1>Hasil pencarian</h1>
+<p class="muted">BTT menerima kebutuhanmu. Hasil di bawah hanya akan menampilkan data UMKM nyata dari sumber yang terhubung.</p>
+<section class="card request">
+<strong>Kebutuhanmu:</strong>
+<p id="requestText"></p>
+</section>
+<section class="card">
+<div class="status">🔎 Matching engine</div>
+<p class="muted">Database UMKM belum terhubung pada tahap ini, jadi BTT tidak akan menampilkan hasil contoh atau membuat-buat nama usaha.</p>
+<div class="empty">Saat koneksi database aktif, halaman ini akan menampilkan UMKM, produk/jasa, harga, area layanan, kecocokan, dan kontak yang benar-benar tersedia.</div>
+<a class="btn" href="dashboard-pembeli.html">← Kembali dan ubah kebutuhan</a>
+</section>
+<footer class="pw"><img src="jfs-ai-robot-small.webp.png" alt="Robot JFS AI"><span>Powered by JFS AI Technology</span></footer>
+</main>
+<script>
+(function(){var p=new URLSearchParams(location.search).get("request")||"";document.getElementById("requestText").textContent=p||"Belum ada kebutuhan yang dikirim.";})();
+</script>
+</body>
+</html>
