@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bantutemukan.id untuk UMKM – Terima pesanan dari pembeli yang sudah tahu maunya</title>
+<meta name="description" content="Daftarkan usahamu di Bantutemukan.id dan terima pesanan lewat WhatsApp dari pembeli yang kebutuhannya sudah jelas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0f2540;--paper:#f2f5fa;--leaf:#1d4f91;--sun:#f2b33d;--line:#cdd8e6;--white:#fff;--muted:#4a5f78}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.1;margin:0}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header{padding:18px 0}
+header .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px}
+.logo{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:1.4rem;text-decoration:none}
+.logo b{color:var(--leaf)}
+.top{font-size:.95rem;color:var(--muted)}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:36px 0 64px}
+h1{font-size:clamp(2.2rem,5vw,3.5rem);font-weight:800;letter-spacing:-.02em}
+.sub{font-size:1.15rem;color:var(--muted);max-width:30em;margin:18px 0 28px}
+.btn{display:inline-block;background:var(--ink);color:var(--white);padding:16px 28px;border-radius:999px;font-weight:700;text-decoration:none;font-size:1.05rem;border:3px solid var(--ink)}
+.btn:hover{background:var(--leaf);border-color:var(--leaf)}
+.btn:focus-visible,a:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
+.note{display:block;margin-top:12px;font-size:.92rem;color:var(--muted)}
+.demo{background:var(--white);border:2px solid var(--ink);border-radius:20px;padding:20px;box-shadow:8px 8px 0 var(--sun)}
+.msg{background:#e6eef9;border:1.5px solid var(--line);border-radius:4px 18px 18px 18px;padding:14px 16px;font-size:.97rem}
+.msg b{display:block;margin-bottom:6px;color:var(--leaf)}
+.msg ul{margin:6px 0 0;padding-left:18px}
+.tag{font-size:.8rem;color:var(--muted);margin:14px 0 0}
+section{padding:56px 0;border-top:1.5px solid var(--line)}
+h2{font-size:clamp(1.7rem,3.5vw,2.4rem);font-weight:700;margin-bottom:28px;max-width:20em}
+.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.cols h3{font-size:1.25rem;margin-bottom:8px}
+.cols p{margin:0;color:var(--muted)}
+.lead{font-size:1.2rem;max-width:34em;color:var(--muted);margin:0}
+.final{background:var(--ink);color:var(--white);text-align:center;padding:72px 0;border:0}
+.final h2{margin:0 auto 24px}
+.final .btn{background:var(--sun);color:var(--ink);border-color:var(--sun)}
+.final .btn:hover{background:var(--white);border-color:var(--white)}
+.final .note{color:#b7c7dc}
+footer{padding:28px 0;font-size:.92rem;color:var(--muted)}
+footer a{color:var(--leaf)}
+@media(max-width:800px){.hero,.cols{grid-template-columns:1fr}.hero{padding-top:12px}.demo{box-shadow:5px 5px 0 var(--sun)}}
+[data-theme=dark]{--paper:#0b1626;--ink:#e8eff8;--white:#14233a;--leaf:#6aa6e8;--line:#2a3d57;--muted:#9fb2c9;color-scheme:dark}
+[data-theme=dark] .msg{background:#1a2c47}
+[data-theme=dark] .steps li:before{color:#0f2540}
+[data-theme=dark] .final{background:#12243d;color:#e8eff8}
+[data-theme=dark] .final .btn{color:#0f2540}
+[data-theme=dark] .final .btn:hover{background:#fff;border-color:#fff;color:#0f2540}
+.hd{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.tm{font:600 .9rem system-ui,sans-serif;border:2px solid var(--line);background:var(--white);color:var(--ink);padding:8px 14px;border-radius:99px;cursor:pointer}
+.tm:hover{border-color:var(--leaf)}
+.pw{display:flex;flex-direction:column;align-items:center;gap:6px;margin:0 0 14px;text-align:center}
+.pw img{width:64px;height:auto;display:block}
+.pw span{font-weight:700;font-size:.95rem;color:var(--ink)}
+footer .wrap{text-align:center}
+</style>
+<meta name="color-scheme" content="light dark">
+<script>try{var t=localStorage.getItem('bt-theme')||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body>
+<header><div class="wrap"><a class="logo" href="index.html">Bantutemukan<b>.id</b></a><span class="hd"><a class="top" href="index.html">Cari UMKM? Ke halaman pembeli</a><button id="tm" class="tm" type="button" aria-label="Ganti mode terang atau gelap">🌙 Gelap</button></span></div></header>
+
+<main>
+<div class="wrap hero">
+  <div>
+    <h1>Pembeli sudah tahu mereka butuh apa. Biar mereka menemukan usahamu.</h1>
+    <p class="sub">Daftarkan usahamu di Bantutemukan.id dan terima pesanan dari pembeli yang kebutuhannya sudah jelas.</p>
+    <!-- GANTI 62XXXXXXXXXX dengan nomor WhatsApp Bantutemukan.id -->
+    <a class="btn" href="https://wa.me/62XXXXXXXXXX?text=Halo%20Bantutemukan.id%2C%20saya%20ingin%20mendaftarkan%20usaha%20saya.">Daftarkan usahaku</a>
+    <span class="note">[Gratis untuk UMKM / sebutkan biaya jika ada]</span>
+  </div>
+  <div class="demo" aria-label="Contoh pesan masuk">
+    <div class="msg"><b>Pesanan baru dari Bantutemukan.id</b>
+      Oleh-oleh Surabaya untuk acara kantor
+      <ul><li>Jumlah: 30 box</li><li>Budget: ± Rp33.000/box</li><li>Kirim ke: Rungkut</li><li>Dibutuhkan: besok</li></ul>
+    </div>
+    <p class="tag">Contoh pesan. Detail sudah lengkap, tidak perlu tanya dari nol.</p>
+  </div>
+</div>
+
+<section><div class="wrap">
+  <h2>Pernah kehilangan pesanan besar hanya karena pembeli tidak tahu tokomu ada?</h2>
+  <p class="lead">Di Bantutemukan.id, pembeli menulis jumlah, budget, tanggal, dan lokasi. Kami mencocokkannya dengan UMKM yang pas, lalu pesan masuk ke WhatsAppmu dengan detail yang sudah lengkap.</p>
+</div></section>
+
+<section><div class="wrap">
+  <h2>Mulai tanpa mengubah cara kerjamu</h2>
+  <div class="cols">
+    <div><h3>Daftar sekitar 5 menit</h3><p>Cukup nama usaha, produk atau jasa, harga, dan area layanan.</p></div>
+    <div><h3>Pesanan masuk lewat WhatsApp</h3><p>Kamu tetap pakai cara kerja yang sudah biasa.</p></div>
+    <div><h3>Keputusan tetap di tanganmu</h3><p>Kamu yang menentukan harga dan mau menerima pesanan atau tidak.</p></div>
+  </div>
+</div></section>
+
+<section class="final"><div class="wrap">
+  <h2>Siap menerima pesanan berikutnya?</h2>
+  <a class="btn" href="https://wa.me/62XXXXXXXXXX?text=Halo%20Bantutemukan.id%2C%20saya%20ingin%20mendaftarkan%20usaha%20saya.">Daftarkan usahaku</a>
+  <span class="note">[Gratis untuk UMKM / sebutkan biaya jika ada]</span>
+</div></section>
+</main>
+
+<footer><div class="wrap"><div class="pw"><img src="jfs-ai-robot-small.webp" alt="Robot JFS AI" width="64" height="65"><span>Powered by JFS AI Technology</span></div>© Bantutemukan.id · Mencari UMKM? <a href="index.html">Ke halaman pembeli</a></div></footer>
+<script>
+(function(){var b=document.getElementById('tm'),r=document.documentElement;
+function s(t){r.dataset.theme=t;b.textContent=t==='dark'?'☀️ Terang':'🌙 Gelap';try{localStorage.setItem('bt-theme',t)}catch(e){}}
+s(r.dataset.theme==='dark'?'dark':'light');
+b.addEventListener('click',function(){s(r.dataset.theme==='dark'?'light':'dark')});})();
+</script>
+</body>
+</html>
