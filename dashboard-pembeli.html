@@ -66,7 +66,7 @@ footer .wrap{text-align:center}
   <div class="chips" aria-label="Contoh kebutuhan">
     <button class="chip">🎁 Oleh-oleh</button><button class="chip">🍱 Katering</button><button class="chip">🔧 Jasa</button><button class="chip">👕 Seragam</button>
   </div>
-  <button class="btn big">🔍 Carikan UMKM untukku</button>
+  <button id="findBtn" class="btn big" type="button">🔍 Carikan UMKM untukku</button>
 </div>
 
 <h2 id="pesanan">📦 Pesananku</h2>
@@ -103,5 +103,19 @@ footer .wrap{text-align:center}
   <a href="#pilihan"><i>⭐</i>Pilihan</a>
   <a href="#bantuan"><i>🙋</i>Bantuan</a>
 </nav>
+<script>
+(function(){
+  var input=document.getElementById("need");
+  document.querySelectorAll(".chip").forEach(function(chip){
+    chip.addEventListener("click",function(){input.value=chip.textContent.replace(/^\S+\s*/,"");input.focus();});
+  });
+  document.getElementById("findBtn").addEventListener("click",function(){
+    var request=input.value.trim();
+    if(!request){input.focus();return;}
+    try{localStorage.setItem("btt-last-request",request)}catch(e){}
+    location.href="hasil-pencarian.html?request="+encodeURIComponent(request);
+  });
+})();
+</script>
 </body>
 </html>
