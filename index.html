@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bantutemukan.id – Ketik kebutuhanmu, kami carikan UMKM Surabaya</title>
+<meta name="description" content="Butuh oleh-oleh, katering, atau jasa lokal? Tulis kebutuhanmu, Bantutemukan.id mencarikan UMKM Surabaya yang bisa memenuhinya.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0f2540;--paper:#f2f5fa;--leaf:#1d4f91;--sun:#f2b33d;--line:#cdd8e6;--white:#fff;--muted:#4a5f78}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.1;margin:0}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header{padding:18px 0}
+header .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px}
+.logo{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:1.4rem;text-decoration:none}
+.logo b{color:var(--leaf)}
+.top{font-size:.95rem;color:var(--muted)}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:36px 0 64px}
+h1{font-size:clamp(2.2rem,5vw,3.6rem);font-weight:800;letter-spacing:-.02em}
+.sub{font-size:1.15rem;color:var(--muted);max-width:30em;margin:18px 0 28px}
+.btn{display:inline-block;background:var(--ink);color:var(--white);padding:16px 28px;border-radius:999px;font-weight:700;text-decoration:none;font-size:1.05rem;border:3px solid var(--ink)}
+.btn:hover{background:var(--leaf);border-color:var(--leaf)}
+.btn:focus-visible,a:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
+.note{display:block;margin-top:12px;font-size:.92rem;color:var(--muted)}
+.demo{background:var(--white);border:2px solid var(--ink);border-radius:20px;padding:20px;box-shadow:8px 8px 0 var(--sun)}
+.bubble{background:var(--leaf);color:var(--white);padding:14px 16px;border-radius:18px 18px 4px 18px;margin-left:12%}
+.reply{margin:16px 0 8px;font-size:.95rem;color:var(--muted)}
+.item{border:1.5px solid var(--line);border-radius:12px;padding:12px 14px;margin-top:10px;display:flex;justify-content:space-between;gap:10px;font-size:.95rem}
+.item strong{display:block}
+.item span{color:var(--muted);font-size:.88rem}
+.price{white-space:nowrap;font-weight:700}
+.tag{font-size:.8rem;color:var(--muted);margin-top:14px}
+section{padding:56px 0;border-top:1.5px solid var(--line)}
+h2{font-size:clamp(1.7rem,3.5vw,2.4rem);font-weight:700;margin-bottom:28px;max-width:20em}
+.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.cols h3{font-size:1.25rem;margin-bottom:8px}
+.cols p{margin:0;color:var(--muted)}
+.steps{counter-reset:s;list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.steps li{counter-increment:s}
+.steps li:before{content:counter(s);display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--sun);font-family:"Bricolage Grotesque",sans-serif;font-weight:800;margin-bottom:12px}
+.steps b{display:block;font-size:1.1rem}
+.final{background:var(--ink);color:var(--white);text-align:center;padding:72px 0;border:0}
+.final h2{margin:0 auto 24px}
+.final .btn{background:var(--sun);color:var(--ink);border-color:var(--sun)}
+.final .btn:hover{background:var(--white);border-color:var(--white)}
+.final .note{color:#b7c7dc}
+footer{padding:28px 0;font-size:.92rem;color:var(--muted)}
+footer a{color:var(--leaf)}
+@media(max-width:800px){.hero,.cols,.steps{grid-template-columns:1fr}.hero{padding-top:12px}.demo{box-shadow:5px 5px 0 var(--sun)}}
+[data-theme=dark]{--paper:#0b1626;--ink:#e8eff8;--white:#14233a;--leaf:#6aa6e8;--line:#2a3d57;--muted:#9fb2c9;color-scheme:dark}
+[data-theme=dark] .msg{background:#1a2c47}
+[data-theme=dark] .steps li:before{color:#0f2540}
+[data-theme=dark] .final{background:#12243d;color:#e8eff8}
+[data-theme=dark] .final .btn{color:#0f2540}
+[data-theme=dark] .final .btn:hover{background:#fff;border-color:#fff;color:#0f2540}
+.hd{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.tm{font:600 .9rem system-ui,sans-serif;border:2px solid var(--line);background:var(--white);color:var(--ink);padding:8px 14px;border-radius:99px;cursor:pointer}
+.tm:hover{border-color:var(--leaf)}
+.pw{display:flex;flex-direction:column;align-items:center;gap:6px;margin:0 0 14px;text-align:center}
+.pw img{width:64px;height:auto;display:block}
+.pw span{font-weight:700;font-size:.95rem;color:var(--ink)}
+footer .wrap{text-align:center}
+</style>
+<meta name="color-scheme" content="light dark">
+<script>try{var t=localStorage.getItem('bt-theme')||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body>
+<header><div class="wrap"><a class="logo" href="#">Bantutemukan<b>.id</b></a><span class="hd"><a class="top" href="umkm.html">Punya usaha? Daftar di sini</a><button id="tm" class="tm" type="button" aria-label="Ganti mode terang atau gelap">🌙 Gelap</button></span></div></header>
+
+<main>
+<div class="wrap hero">
+  <div>
+    <h1>Butuh oleh-oleh untuk 30 orang, budget Rp1 juta, besok sampai? Ketik saja.</h1>
+    <p class="sub">Bantutemukan.id mencarikan UMKM Surabaya yang benar-benar bisa memenuhinya, lengkap dengan harga dan kontak WhatsApp.</p>
+    <!-- GANTI 62XXXXXXXXXX dengan nomor WhatsApp Bantutemukan.id -->
+    <a class="btn" href="https://wa.me/62XXXXXXXXXX?text=Halo%20Bantutemukan.id%2C%20saya%20butuh%20...">Ceritakan kebutuhanmu</a>
+    <span class="note">Gratis dicoba · sekitar 1 menit</span>
+  </div>
+  <div class="demo" aria-label="Contoh tampilan">
+    <div class="bubble">Oleh-oleh Surabaya untuk 30 orang, budget Rp1 juta, kirim ke Rungkut besok.</div>
+    <p class="reply">Ini pilihan yang cocok dengan kebutuhanmu:</p>
+    <div class="item"><div><strong>UMKM Contoh A</strong><span>30 box · bisa kirim ke Rungkut</span></div><div class="price">Rp32.000/box</div></div>
+    <div class="item"><div><strong>UMKM Contoh B</strong><span>30 paket · siap besok</span></div><div class="price">Rp33.500/paket</div></div>
+    <p class="tag">Contoh tampilan. Nama dan harga hanya ilustrasi.</p>
+  </div>
+</div>
+
+<section><div class="wrap">
+  <h2>Tulis seperti ngobrol dengan teman. Sisanya kami urus.</h2>
+  <ol class="steps">
+    <li><b>Ceritakan</b>Jumlah, budget, tanggal, dan lokasi. Tidak perlu formulir panjang.</li>
+    <li><b>Terima pilihan</b>Beberapa UMKM yang cocok, dengan harga dan kontak.</li>
+    <li><b>Hubungi lewat WhatsApp</b>Pilih yang kamu suka, lalu lanjut bicara langsung dengan penjualnya.</li>
+  </ol>
+</div></section>
+
+<section><div class="wrap">
+  <h2>Hemat dua jam mencari. Cukup beberapa menit memilih.</h2>
+  <div class="cols">
+    <div><h3>Cukup ketik, tanpa ribet</h3><p>Tidak perlu buka puluhan toko atau hitung-hitungan sendiri.</p></div>
+    <div><h3>Pilihan dari UMKM nyata</h3><p>Ada nama usaha, harga, dan nomor WhatsApp yang bisa langsung dihubungi.</p></div>
+    <div><h3>Tidak ketemu? Kami bantu</h3><p>Kalau sistem belum menemukan yang pas, tim kami yang membantu mencarikan.</p></div>
+  </div>
+</div></section>
+
+<section class="final"><div class="wrap">
+  <h2>Kebutuhanmu apa hari ini?</h2>
+  <a class="btn" href="https://wa.me/62XXXXXXXXXX?text=Halo%20Bantutemukan.id%2C%20saya%20butuh%20...">Ceritakan kebutuhanmu</a>
+  <span class="note">Gratis dicoba · sekitar 1 menit</span>
+</div></section>
+</main>
+
+<footer><div class="wrap"><div class="pw"><img src="jfs-ai-robot-small.webp" alt="Robot JFS AI" width="64" height="65"><span>Powered by JFS AI Technology</span></div>© Bantutemukan.id · Punya usaha? <a href="umkm.html">Daftarkan usahamu</a></div></footer>
+<script>
+(function(){var b=document.getElementById('tm'),r=document.documentElement;
+function s(t){r.dataset.theme=t;b.textContent=t==='dark'?'☀️ Terang':'🌙 Gelap';try{localStorage.setItem('bt-theme',t)}catch(e){}}
+s(r.dataset.theme==='dark'?'dark':'light');
+b.addEventListener('click',function(){s(r.dataset.theme==='dark'?'light':'dark')});})();
+</script>
+</body>
+</html>
